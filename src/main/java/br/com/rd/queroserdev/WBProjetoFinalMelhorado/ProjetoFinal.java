@@ -67,7 +67,7 @@ public class ProjetoFinal extends HttpServlet {
 	protected void alterar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id =request.getParameter("id");
 		User user = container.consultar(Integer.parseInt(id));
-		request.setAttribute("id", user.getId());
+		request.setAttribute("id",id());
 		request.setAttribute("nome", user.getNome());
 		request.setAttribute("email", user.getEmail());
 		request.setAttribute("telefone", user.getTelefone());
